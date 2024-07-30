@@ -10,3 +10,9 @@ Este mini-mundo descreve o sistema de gerenciamento de um estacionamento que int
 - Diego Rafael
 - Alexandre Souza
 - Eraldo Cassimiro
+
+
+
+# Diagrama Entidade-Relacionamento
+
+![image](https://github.com/user-attachments/assets/6a6722bc-e60a-4d03-a79c-9fc128817025)
