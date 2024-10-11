@@ -1,0 +1,64 @@
+﻿SELECT 
+	p.Nome,
+	p.End_Rua,
+	p.End_Bairro,
+	t.Telefone
+FROM 
+	Cliente c
+JOIN 
+	Pessoa p ON c.CPF = p.CPF
+JOIN 
+	Telefone t ON p.CPF = t.CPF
+WHERE 
+	p.End_Bairro <> 'COHAB'
+ORDER BY 
+	p.Nome;
+
+
+SELECT
+	r.CPF_Cliente,
+	COUNT(r.Placa_veiculo) AS total_reservas,
+	SUM(r.Valor) AS valor_total_reservas
+FROM
+	Reserva r
+GROUP BY
+	r.CPF_Cliente;
+
+
+SELECT 
+	cl.CPF,
+	COUNT(ph.Placa_veiculo) AS total_veiculos
+FROM 
+	Cliente cl
+LEFT JOIN 
+	Possui ph ON cl.CPF = ph.CPF_cliente
+GROUP BY 
+	cl.CPF
+HAVING 
+	COUNT(ph.Placa_veiculo) > 0
+FETCH FIRST 3 ROWS ONLY;
+
+
+SELECT 
+        p.Nome,
+        t.Telefone
+FROM 
+	Cliente c
+JOIN 
+        Pessoa p ON c.CPF = p.CPF
+JOIN 
+Telefone t ON p.CPF = t.CPF
+ORDER BY 
+	p.Nome;
+
+
+SELECT
+	p.Nome
+FROM
+	Cliente c
+JOIN
+	Pessoa p ON c.CPF = p.CPF
+WHERE
+	c.CPF IN (SELECT t.CPF FROM Telefone t)
+ORDER BY
+	p.Nome;

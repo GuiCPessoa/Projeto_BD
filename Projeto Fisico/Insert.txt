@@ -1,0 +1,90 @@
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('12345678901', 'Ana Souza', '50000000', 'Rua A, 123', 'Centro');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('23456789012', 'Bruno Lima', '51000100', 'Av. B, 456', 'Jardim das Flores');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('34567890123', 'Carlos Silva', '52000200', 'Rua C, 789', 'Centro');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('45678901234', 'Daniela Santos', '53000300', 'Rua D, 654', 'COHAB');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('56789012345', 'Eduardo Costa', '54000400', 'Av. Nove, 12', 'Jardim das Flores');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('67890123456', 'Fernanda Oliveira', '55000500', 'Rua E, 43', 'Bairro Velho');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('78901234567', 'Gabriel Almeida', '56000600', 'Rua F, 323', 'Bairro Novo');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('89012345678', 'Heloisa Pereira', '57000700', 'Av. Sete, 72', 'Centro');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('90123456789', 'Igor Martins', '58000800', 'Rua G, 74', 'COHAB');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('01234567890', 'Juliana Fernandes', '59000900', 'Rua M, 66', 'Jardim das Flores');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('11122334455', 'Karine Souza', '60000000', 'Av. Dez, 77', 'Bairro Novo');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('22233445566', 'Lucas Carvalho', '61000100', 'Rua Paris, 99', 'COHAB');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('33344556677', 'Maria Ferreira', '63000300', 'Av. Rio, 27', 'Bairro Velho');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('44455667788', 'Natália Costa', '64000400', 'Rua Cinco, 47', 'Jardim das Flores');
+INSERT INTO Pessoa (CPF, Nome, End_CEP, End_Rua, End_Bairro) VALUES ('55566778899', 'Olavo Santos', '62000200', 'Rua Luar, 555', 'Bairro Novo');
+
+INSERT INTO Telefone (CPF, Telefone) VALUES ('12345678901', '(07)99999-1111');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('23456789012', '(07)99999-2222');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('34567890123', '(07)99999-3333');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('45678901234', '(07)99999-4444');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('56789012345', '(07)99999-5555');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('67890123456', '(07)99999-6666');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('78901234567', '(07)99999-7777');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('89012345678', '(07)99999-8888');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('90123456789', '(07)99999-9999');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('01234567890', '(07)88888-1111');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('11122334455', '(07)88888-2222');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('22233445566', '(07)88888-3333');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('33344556677', '(07)88888-4444');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('44455667788', '(07)88888-5555');
+INSERT INTO Telefone (CPF, Telefone) VALUES ('55566778899', '(07)88888-6666');
+
+INSERT INTO Cliente (CPF) VALUES ('12345678901');
+INSERT INTO Cliente (CPF) VALUES ('23456789012');
+INSERT INTO Cliente (CPF) VALUES ('34567890123');
+INSERT INTO Cliente (CPF) VALUES ('45678901234');
+INSERT INTO Cliente (CPF) VALUES ('56789012345');
+
+INSERT INTO Estacionamento (Endereco, Capacidade) VALUES ('Av. Principal, 1000', 50);
+INSERT INTO Estacionamento (Endereco, Capacidade) VALUES ('Rua Secundária, 200', 75);
+INSERT INTO Estacionamento (Endereco, Capacidade) VALUES ('Av. Beira Mar, 300', 100);
+INSERT INTO Estacionamento (Endereco, Capacidade) VALUES ('Rua do Parque, 400', 45);
+INSERT INTO Estacionamento (Endereco, Capacidade) VALUES ('Av. Independência, 500', 80);
+
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento) VALUES ('11122334455', 0001, 'Av. Principal, 1000');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento) VALUES ('22233445566', 0002, 'Rua Secundária, 200');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento) VALUES ('33344556677', 0003, 'Av. Beira Mar, 300');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento) VALUES ('44455667788', 0004, 'Rua do Parque, 400');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento) VALUES ('55566778899', 0005, 'Av. Independência, 500');
+
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento, CPF_CHEFE) VALUES ('67890123456', 0006, 'Av. Principal, 1000', '11122334455');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento, CPF_CHEFE) VALUES ('78901234567', 0007, 'Rua Secundária, 200', '22233445566');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento, CPF_CHEFE) VALUES ('89012345678', 0008, 'Av. Beira Mar, 300', '33344556677');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento, CPF_CHEFE) VALUES ('90123456789', 0009, 'Rua do Parque, 400', '44455667788');
+INSERT INTO Funcionario (CPF, Matricula, Endereco_estacionamento, CPF_CHEFE) VALUES ('01234567890', 0010, 'Av. Independência, 500', '55566778899');
+
+INSERT INTO Veiculo (Placa, Modelo) VALUES ('ABC1234', 'Toyota Corolla');
+INSERT INTO Veiculo (Placa, Modelo) VALUES ('XYZ5678', 'Honda Civic');
+INSERT INTO Veiculo (Placa, Modelo) VALUES ('DEF4321', 'Ford Focus');
+INSERT INTO Veiculo (Placa, Modelo) VALUES ('GHI8765', 'Chevrolet Onix');
+INSERT INTO Veiculo (Placa, Modelo) VALUES ('JKL9876', 'VW Gol');
+
+INSERT INTO Vaga (Endereco_estacionamento, Numero) VALUES ('Av. Principal, 1000', 7);
+INSERT INTO Vaga (Endereco_estacionamento, Numero) VALUES ('Av. Beira Mar, 300', 8);
+INSERT INTO Vaga (Endereco_estacionamento, Numero) VALUES ('Rua do Parque, 400', 5);
+INSERT INTO Vaga (Endereco_estacionamento, Numero) VALUES ('Av. Independência, 500', 6);
+INSERT INTO Vaga (Endereco_estacionamento, Numero) VALUES ('Rua Secundária, 200', 9);
+
+INSERT INTO Reserva (CPF_Cliente, Placa_veiculo, Endereco_estacionamento, Numero, Valor, DataHora)   
+VALUES ('12345678901', 'ABC1234', 'Av. Principal, 1000', 7, 30.00, TO_DATE('2024-08-01 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Reserva (CPF_Cliente, Placa_veiculo, Endereco_estacionamento, Numero, Valor, DataHora)   
+VALUES ('23456789012', 'XYZ5678', 'Rua Secundária, 200', 9, 25.00, TO_DATE('2024-08-03 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Reserva (CPF_Cliente, Placa_veiculo, Endereco_estacionamento, Numero, Valor, DataHora)   
+VALUES ('34567890123', 'DEF4321', 'Av. Beira Mar, 300', 8, 60.00, TO_DATE('2024-08-05 12:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Reserva (CPF_Cliente, Placa_veiculo, Endereco_estacionamento, Numero, Valor, DataHora)   
+VALUES ('45678901234', 'GHI8765', 'Rua do Parque, 400', 5, 30.00, TO_DATE('2024-08-07 10:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Reserva (CPF_Cliente, Placa_veiculo, Endereco_estacionamento, Numero, Valor, DataHora)   
+VALUES ('56789012345', 'JKL9876', 'Av. Independência, 500', 6, 40.00, TO_DATE('2024-08-10 12:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+
+INSERT INTO Cupom (ID, Valor, CPF_Cliente, Placa_veiculo) VALUES (001, 25.00, '12345678901', 'ABC1234');
+INSERT INTO Cupom (ID, Valor, CPF_Cliente, Placa_veiculo) VALUES (002, 30.00, '23456789012', 'XYZ5678');
+INSERT INTO Cupom (ID, Valor, CPF_Cliente, Placa_veiculo) VALUES (003, 15.00, '34567890123', 'DEF4321');
+INSERT INTO Cupom (ID, Valor, CPF_Cliente, Placa_veiculo) VALUES (004, 10.00, '45678901234', 'GHI8765');
+INSERT INTO Cupom (ID, Valor, CPF_Cliente, Placa_veiculo) VALUES (005, 35.00, '56789012345', 'JKL9876');
+
+INSERT INTO Possui (CPF_cliente, Placa_veiculo) VALUES ('12345678901', 'ABC1234');
+INSERT INTO Possui (CPF_cliente, Placa_veiculo) VALUES ('23456789012', 'XYZ5678');
+INSERT INTO Possui (CPF_cliente, Placa_veiculo) VALUES ('34567890123', 'DEF4321');
+INSERT INTO Possui (CPF_cliente, Placa_veiculo) VALUES ('45678901234', 'GHI8765');
+INSERT INTO Possui (CPF_cliente, Placa_veiculo) VALUES ('56789012345', 'JKL9876');

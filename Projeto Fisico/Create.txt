@@ -1,0 +1,75 @@
+CREATE TABLE Pessoa ( 
+    CPF CHAR(11) PRIMARY KEY, 
+    Nome CHAR(50) NOT NULL, 
+    End_CEP NUMBER(8), 
+    End_Rua CHAR(50) , 
+    End_Bairro CHAR(50) 
+);
+
+CREATE TABLE Telefone ( 
+    CPF CHAR(11), 
+    Telefone CHAR(14), 
+    PRIMARY KEY (CPF, Telefone), 
+    FOREIGN KEY (CPF) REFERENCES Pessoa(CPF) 
+);
+
+CREATE TABLE Cliente ( 
+    CPF CHAR(11) PRIMARY KEY, 
+    FOREIGN KEY (CPF) REFERENCES Pessoa(CPF) 
+);
+
+CREATE TABLE Estacionamento (  
+    Endereco CHAR(30) PRIMARY KEY,  
+    Capacidade INT NOT NULL  
+);
+
+CREATE TABLE Funcionario ( 
+    CPF CHAR(11) PRIMARY KEY,  
+    Matricula INT,  
+    Endereco_estacionamento CHAR(30), 
+    CPF_CHEFE CHAR(11) NULL, 
+    FOREIGN KEY (CPF) REFERENCES Pessoa(CPF),  
+    FOREIGN KEY (Endereco_estacionamento) REFERENCES Estacionamento(Endereco), 
+    CONSTRAINT AUTORELACIONAMENTO FOREIGN KEY (CPF_CHEFE) REFERENCES Funcionario(CPF) 
+);
+
+CREATE TABLE Veiculo ( 
+    Placa CHAR(7) PRIMARY KEY, 
+    Modelo VARCHAR(30) NOT NULL 
+);
+
+CREATE TABLE Vaga ( 
+    Endereco_estacionamento CHAR(30), 
+    Numero INT, 
+    PRIMARY KEY (Endereco_estacionamento, Numero), 
+    FOREIGN KEY (Endereco_estacionamento) REFERENCES Estacionamento(Endereco) 
+);
+
+CREATE TABLE Reserva (  
+    CPF_Cliente CHAR(11),  
+    Placa_veiculo CHAR(7),  
+    Endereco_estacionamento CHAR(30),  
+    Numero INT,  
+    Valor DECIMAL(10, 2),  
+    DataHora TIMESTAMP,  
+    PRIMARY KEY (CPF_Cliente, Placa_veiculo),  
+    FOREIGN KEY (CPF_Cliente) REFERENCES Cliente(CPF),  
+    FOREIGN KEY (Placa_veiculo) REFERENCES Veiculo(Placa),  
+    FOREIGN KEY (Endereco_estacionamento, Numero) REFERENCES Vaga(Endereco_estacionamento, Numero)  
+);
+
+CREATE TABLE Cupom ( 
+    ID INT PRIMARY KEY, 
+    Valor DECIMAL(10, 2) NOT NULL, 
+    CPF_Cliente CHAR(11), 
+    Placa_veiculo CHAR(7), 
+    FOREIGN KEY (CPF_Cliente, Placa_veiculo) REFERENCES Reserva(CPF_Cliente, Placa_veiculo) 
+);
+
+CREATE TABLE Possui ( 
+    CPF_cliente CHAR(11), 
+    Placa_veiculo CHAR(7), 
+    PRIMARY KEY (CPF_cliente, Placa_veiculo), 
+    FOREIGN KEY (CPF_cliente) REFERENCES Cliente(CPF), 
+    FOREIGN KEY (Placa_veiculo) REFERENCES Veiculo(Placa) 
+);
